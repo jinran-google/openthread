@@ -62,6 +62,17 @@ if(OT_POSIX_MAX_POWER_TABLE)
     )
 endif()
 
+option(OT_POSIX_SETTINGS "enable POSIX platform settings" ON)
+if(OT_POSIX_SETTINGS)
+    target_compile_definitions(ot-posix-config
+        INTERFACE "OPENTHREAD_POSIX_CONFIG_PLATFORM_SETTINGS_ENABLE=1"
+    )
+else()
+    target_compile_definitions(ot-posix-config
+        INTERFACE "OPENTHREAD_POSIX_CONFIG_PLATFORM_SETTINGS_ENABLE=0"
+    )
+endif()
+
 set(OT_POSIX_CONFIG_RCP_BUS "" CACHE STRING "RCP bus type")
 if(OT_POSIX_CONFIG_RCP_BUS)
     target_compile_definitions(ot-posix-config

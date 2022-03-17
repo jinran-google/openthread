@@ -35,6 +35,8 @@
 #include "openthread-posix-config.h"
 #include "platform-posix.h"
 
+#if OPENTHREAD_POSIX_CONFIG_PLATFORM_SETTINGS_ENABLE
+
 #include <assert.h>
 #include <fcntl.h>
 #include <inttypes.h>
@@ -661,3 +663,5 @@ int main()
     return 0;
 }
 #endif
+
+#endif // OPENTHREAD_POSIX_CONFIG_PLATFORM_SETTINGS_ENABLE
