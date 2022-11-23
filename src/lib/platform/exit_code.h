@@ -82,6 +82,11 @@ enum
      * No response from radio spinel.
      */
     OT_EXIT_RADIO_SPINEL_NO_RESPONSE = 6,
+
+    /**
+     * OpenThread needs to be restarted.
+     */
+    OT_EXIT_SHOULD_RESTART = 7,
 };
 
 /**
